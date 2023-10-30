@@ -1,6 +1,5 @@
 "use client";
 import axios from "axios";
-import { useState } from "react";
 import { useQuery } from "react-query";
 
 const useRequest = (function_name, queries = {}) => {
@@ -18,7 +17,7 @@ const useRequest = (function_name, queries = {}) => {
         request = await axios(`https://www.alphavantage.co/query?function=${function_name}&${searchQuery.toString()}&apikey=demo`);
       }
       else {
-        request = await axios(`https://www.alphavantage.co/query?function=${function_name}&apikey=81MD7I7ZSVTAJA4R`);
+        request = await axios(`https://www.alphavantage.co/query?function=${function_name}&apikey=demo`);
       }
 
       if (request.data) {
