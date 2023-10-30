@@ -47,24 +47,21 @@ const Page = () => {
           className="flex flex-wrap justify-center cursor-pointer"
         >
           {topGainers.slice(0, visibleCards).map((gainer, index) => (
-            <div onClick={() => setSelectedGainer(gainer.ticker)}
+            <Link href={`/Product?symbol=${gainer.ticker}`}
               key={index} className="flex flex-col bg-[#4bb7cd] rounded-lg shadow-md w-full m-6 overflow-hidden sm:w-52 duration-500 hover:scale-105 hover:shadow-xl" >
-              <Link href="/Product">
-                <div className="h-20 w-20 mx-auto my-6 text-center">
-                  <img
-                    src="https://groww.in/groww-logo-270.png"
-                    alt=""
-                    className="rounded-md text-center"
-                  />
-                </div>
-                <h2 className="text-center px-2 font-bold">{gainer.ticker}</h2>
-                <p className="text-center px-2">Volume: {gainer.volume}</p>
-                <div href="#" className="bg-[#0074e1] text-white p-3 text-center hover:bg-blue-800 transition-all duration-500 font-bold">
-                  <div className="text-center">Price: $ {gainer.price}</div>
-                  <div className="text-center">{gainer.change_percentage}</div>
-                </div>
-              </Link>
-            </div>
+              <div className="h-20 w-20 mx-auto my-6 text-center">
+                <img src="https://i.ibb.co/JKMGMvv/GROWW-3.png" border="0"
+                  alt="groww-logo"
+                  className="rounded-md text-center"
+                />
+              </div>
+              <h2 className="text-center px-2 font-bold">{gainer.ticker}</h2>
+              <p className="text-center px-2">Volume: {gainer.volume}</p>
+              <div href="#" className="bg-[#0074e1] text-white p-3 text-center hover:bg-blue-800 transition-all duration-500 font-bold">
+                <div className="text-center">Price: $ {gainer.price}</div>
+                <div className="text-center">{gainer.change_percentage}</div>
+              </div>
+            </Link>
           ))}
         </div>
 

@@ -1,11 +1,26 @@
 "use client";
 import useRequest from "../../hooks/useRequest";
 import LineChart from "../../Components/LineChart";
+import { useEffect, useState } from "react";
 
 const page = () => {
+  const [symbol_name, setSymbolName] = useState(null);
+
+  useEffect(() => {
+    // Parse the query parameter from the URL manually
+    const urlParams = new URLSearchParams(window.location.search);
+    const symbolParam = urlParams.get('symbol');
+
+    // Update the state with the parsed symbol
+    if (symbolParam) {
+      setSymbolName(symbolParam);
+    }
+  }, []);
+
   const { data, isLoading } = useRequest("OVERVIEW", {
-    symbol: 'IBM',
+    symbol: symbol_name,
   });
+
   if (isLoading) {
     return (
       <div className="text-center mt-8">

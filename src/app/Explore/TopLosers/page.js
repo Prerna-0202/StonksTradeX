@@ -46,11 +46,12 @@ const page = () => {
                 className="flex flex-wrap justify-center cursor-pointer"
             >
                 {topLosers.slice(0, visibleCards).map((gainer, index) => (
-            <div key={index} className="flex flex-col bg-[#4bb7cd] rounded-lg shadow-md w-full m-6 overflow-hidden sm:w-52 duration-500 hover:scale-105 hover:shadow-xl">
+                    <Link href={`/Product?symbol=${gainer.ticker}`}
+                        key={index}
+                        className="flex flex-col bg-[#4bb7cd] rounded-lg shadow-md w-full m-6 overflow-hidden sm:w-52 duration-500 hover:scale-105 hover:shadow-xl">
                         <div className="h-20 w-20 mx-auto my-6 text-center">
-                            <img
-                                src="https://groww.in/groww-logo-270.png"
-                                alt=""
+                            <img src="https://i.ibb.co/sKhj1Sk/GROWW-5.png" border="0"
+                                alt="groww-logo"
                                 className="rounded-md text-center"
                             />
                         </div>
@@ -63,17 +64,17 @@ const page = () => {
                             <div className="text-center">Price: {gainer.price}</div>
                             <div className="text-center">{gainer.change_percentage}</div>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </Link>
             {visibleCards < topLosers.length && (
-          <div className="text-center mt-4">
-            <button onClick={loadMore} className="bg-[#0074e1] text-white py-2 px-4 rounded font-bold cursor-pointer">
-              Load More
-            </button>
-          </div>
-        )}
-      </div>
+                <div className="text-center mt-4">
+                    <button onClick={loadMore} className="bg-[#0074e1] text-white py-2 px-4 rounded font-bold cursor-pointer">
+                        Load More
+                    </button>
+                </div>
+            )}
+        </div>
     );
 };
 
