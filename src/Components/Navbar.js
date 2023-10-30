@@ -11,7 +11,7 @@ const Navbar = () => {
       {/* Logo */}
       <Link
         href="/"
-        className="text-bold text-xl md:text-2xl cursor-pointer w-80"
+        className="text-bold text-xl md:text-2xl cursor-pointer w-80 px-5"
       >
         GrowwStonks ↗
       </Link>
