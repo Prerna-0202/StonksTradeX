@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  min-height: 100vh;
+  background-image: url('background-image.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 60vh;
+  background-position: bottom;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+@media (min-height: 1024px) {
+  body {
+    background-size: 100% 40vh;
+  }
+}
+
+@media (min-height: 768px) {
+  body {
+    background-size: 100% 48vh;
+  }
+}
+
+.box {
+  border-radius: 2rem;
+}
+
+.border-t-10 {
+  border-top-width: 10px;
+}
