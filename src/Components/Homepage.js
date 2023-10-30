@@ -17,7 +17,7 @@ const Homepage = () => (
       {/* Button to Register*/}
       <Link
         href="/Register"
-        className="bg-[#0074e1] text-white border-indigo-300 text-lg px-12 py-4 flex items-center justify-center cursor-pointer border-2 rounded-full disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white hover:text-[#0074e1] hover:scale-[1.02] transition duration-150"
+        className="bg-[#0074e1] text-white border-indigo-300 text-lg px-8 py-2 flex items-center justify-center cursor-pointer border-2 rounded-full disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white hover:text-[#0074e1] hover:scale-[1.02] transition duration-150"
       >
         Get Started
       </Link>

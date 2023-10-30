@@ -17,7 +17,7 @@ const useRequest = (function_name, queries = {}) => {
         request = await axios(`https://www.alphavantage.co/query?function=${function_name}&${searchQuery.toString()}&apikey=demo`);
       }
       else {
-        request = await axios(`https://www.alphavantage.co/query?function=${function_name}&apikey=demo`);
+        request = await axios(`https://www.alphavantage.co/query?function=${function_name}&apikey=XPVWRRUG7H4KVEXO`);
       }
 
       if (request.data) {

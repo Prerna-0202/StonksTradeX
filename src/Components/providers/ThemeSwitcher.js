@@ -7,7 +7,7 @@ const ThemeSwitcher = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
   return (
-    <button className="text-2xl rounded px-5 border bg-white text-[#0074e1] hover:bg-[#0074e1]hover:text-white" onClick={toggleTheme}>
+    <button className="text-2xl rounded px-5 border bg-white text-[#0074e1] hover:bg-[#0074e1]  hover:text-white" onClick={toggleTheme}>
       {theme === "light" ? "Dark" : "Light"}
     </button>
   );
