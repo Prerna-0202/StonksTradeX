@@ -14,10 +14,10 @@ const useRequest = (function_name, queries = {}) => {
     }
     try {
       if (searchQuery.toString()) {
-        request = await axios(`https://www.alphavantage.co/query?function=${function_name}&${searchQuery.toString()}&apikey=81MD7I7ZSVTAJA4R`);
+        request = await axios(`https://www.alphavantage.co/query?function=${function_name}&${searchQuery.toString()}&apikey=process.env.NEXT_PUBLIC_API_KEY`);
       }
       else {
-        request = await axios(`https://www.alphavantage.co/query?function=${function_name}&apikey=81MD7I7ZSVTAJA4R`);
+        request = await axios(`https://www.alphavantage.co/query?function=${function_name}&apikey=process.env.NEXT_PUBLIC_API_KEY`);
       }
 
       if (request.data) {
