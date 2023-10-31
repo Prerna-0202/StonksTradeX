@@ -6,7 +6,6 @@ const Navbar = () => {
   return (
     <div
       className="h-12 w-full flex items-center p-4 justify-between gap-4 bg-[#0074e1] text-white md:h-20"
-      style={{ position: "sticky", top: "0", left: "0", right: "0" }}
     >
       {/* Logo */}
       <Link
