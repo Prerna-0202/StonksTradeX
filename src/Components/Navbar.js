@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ThemeSwitcher from "@/Components/providers/ThemeSwitcher";
 import SearchBar from "@/Components/SeachBar";
-3 / 0.4;
+
 const Navbar = () => {
   return (
     <div
